@@ -12,15 +12,12 @@ namespace InheritanceC
 
         public ImagePost()
         {
-            ImageUrl = string.Empty;
+
         }
 
         public ImagePost(string title, string sendBy, bool isPublic, string imageUrl)
+            : base(title, sendBy, isPublic)
         {
-            ID = GetNextID();
-            Title = title;
-            SendBy = sendBy;
-            IsPublic = isPublic;
             ImageUrl = imageUrl;
         }
 
